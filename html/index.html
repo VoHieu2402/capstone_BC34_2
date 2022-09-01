@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- css file -->
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+
+  <body>
+    <section class="btnGroup">
+      <div class="container d-flex justify-content-between">
+        <div class="filter d-flex">
+          <i class="fa fa-filter"></i>
+          <select class="form-select">
+            <option selected>Brand</option>
+            <option value="all">All</option>
+            <option value="samsung">Samsung</option>
+            <option value="iphone">Iphone</option>
+          </select>
+        </div>
+        <div class="cart">
+          <i class="fa fa-shopping-cart"></i>
+        </div>
+      </div>
+    </section>
+    <section class="products container section text-center">
+      <h2 class="section-title">-Featured Products-</h2>
+      <div class="loader" id="loading" style="display: none"></div>
+      <div class="products__content">
+        <div class="row" id="product_content">
+          <div class="col-12 col-md-6 col-lg-4 cardItem">
+            <div class="card cardPhone">
+              <div class="phone-img">
+                <img
+                  src="https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h3 class="cardPhone__title">IphoneX</h3>
+                    <p class="cardPhone__text">Iphone</p>
+                  </div>
+                  <div>
+                    <h3 class="cardPhone__title">$999</h3>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="cardPhone__rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <div>
+                    <button class="btnPhone-shadow">
+                      <i class="fa fa-shopping-cart"></i>
+                      <span>Add to Cart</span>
+                    </button>
+                    <div class="counter">
+                      <span class="down" onClick="decreaseCount(event, this)"
+                        >-</span
+                      >
+                      <input type="text" value="0" />
+                      <span class="up" onClick="increaseCount(event, this)"
+                        >+</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 cardItem">
+            <div class="card cardPhone">
+              <div class="phone-img">
+                <img
+                  src="https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h3 class="cardPhone__title">IphoneX</h3>
+                    <p class="cardPhone__text">Iphone</p>
+                  </div>
+                  <div>
+                    <h3 class="cardPhone__title">$999</h3>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="cardPhone__rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <div>
+                    <button class="btnPhone-shadow">
+                      <i class="fa fa-shopping-cart"></i>
+                      <span>Add to Cart</span>
+                    </button>
+                    <div class="counter">
+                      <span class="down" onClick="decreaseCount(event, this)"
+                        >-</span
+                      >
+                      <input type="text" value="0" />
+                      <span class="up" onClick="increaseCount(event, this)"
+                        >+</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 cardItem">
+            <div class="card cardPhone">
+              <div class="phone-img">
+                <img
+                  src="https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h3 class="cardPhone__title">IphoneX</h3>
+                    <p class="cardPhone__text">Iphone</p>
+                  </div>
+                  <div>
+                    <h3 class="cardPhone__title">$999</h3>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="cardPhone__rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <div>
+                    <button class="btnPhone-shadow">
+                      <i class="fa fa-shopping-cart"></i>
+                      <span>Add to Cart</span>
+                    </button>
+                    <div class="counter">
+                      <span class="down" onClick="decreaseCount(event, this)"
+                        >-</span
+                      >
+                      <input type="text" value="0" />
+                      <span class="up" onClick="increaseCount(event, this)"
+                        >+</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 cardItem">
+            <div class="card cardPhone">
+              <div class="phone-img">
+                <img
+                  src="https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h3 class="cardPhone__title">IphoneX</h3>
+                    <p class="cardPhone__text">Iphone</p>
+                  </div>
+                  <div>
+                    <h3 class="cardPhone__title">$999</h3>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="cardPhone__rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <div>
+                    <button class="btnPhone-shadow">
+                      <i class="fa fa-shopping-cart"></i>
+                      <span>Add to Cart</span>
+                    </button>
+                    <div class="counter">
+                      <span class="down" onClick="decreaseCount(event, this)"
+                        >-</span
+                      >
+                      <input type="text" value="0" />
+                      <span class="up" onClick="increaseCount(event, this)"
+                        >+</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- js file -->
+    <script src="/javascript/main.js"></script>
+  </body>
+</html>
