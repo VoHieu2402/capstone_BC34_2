@@ -28,8 +28,7 @@
   font-size: 20px;
 }
 
-.btnGroup .cart::after {
-  content: "1";
+.btnGroup .cart .overlay-num {
   position: absolute;
   top: -5px;
   right: -15px;
