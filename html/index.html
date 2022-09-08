@@ -35,11 +35,10 @@
       <div class="container d-flex justify-content-between">
         <div class="filter d-flex">
           <i class="fa fa-filter"></i>
-          <select class="form-select">
-            <option selected>Brand</option>
-            <option value="all">All</option>
-            <option value="samsung">Samsung</option>
-            <option value="iphone">Iphone</option>
+          <select class="form-select" id="productFilter">
+            <option value="All">All</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Iphone">Iphone</option>
           </select>
         </div>
         <div class="cart">
@@ -51,192 +50,7 @@
       <h2 class="section-title">-Featured Products-</h2>
       <div class="loader" id="loading" style="display: none"></div>
       <div class="products__content">
-        <div class="row" id="product_content">
-          <div class="col-12 col-md-6 col-lg-4 cardItem">
-            <div class="card cardPhone">
-              <div class="phone-img">
-                <img
-                  src="https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <h3 class="cardPhone__title">IphoneX</h3>
-                    <p class="cardPhone__text">Iphone</p>
-                  </div>
-                  <div>
-                    <h3 class="cardPhone__title">$999</h3>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div class="cardPhone__rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                  <div>
-                    <button class="btnPhone-shadow">
-                      <i class="fa fa-shopping-cart"></i>
-                      <span>Add to Cart</span>
-                    </button>
-                    <div class="counter">
-                      <span class="down" onClick="decreaseCount(event, this)"
-                        >-</span
-                      >
-                      <input type="text" value="0" />
-                      <span class="up" onClick="increaseCount(event, this)"
-                        >+</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 cardItem">
-            <div class="card cardPhone">
-              <div class="phone-img">
-                <img
-                  src="https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <h3 class="cardPhone__title">IphoneX</h3>
-                    <p class="cardPhone__text">Iphone</p>
-                  </div>
-                  <div>
-                    <h3 class="cardPhone__title">$999</h3>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div class="cardPhone__rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                  <div>
-                    <button class="btnPhone-shadow">
-                      <i class="fa fa-shopping-cart"></i>
-                      <span>Add to Cart</span>
-                    </button>
-                    <div class="counter">
-                      <span class="down" onClick="decreaseCount(event, this)"
-                        >-</span
-                      >
-                      <input type="text" value="0" />
-                      <span class="up" onClick="increaseCount(event, this)"
-                        >+</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 cardItem">
-            <div class="card cardPhone">
-              <div class="phone-img">
-                <img
-                  src="https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <h3 class="cardPhone__title">IphoneX</h3>
-                    <p class="cardPhone__text">Iphone</p>
-                  </div>
-                  <div>
-                    <h3 class="cardPhone__title">$999</h3>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div class="cardPhone__rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                  <div>
-                    <button class="btnPhone-shadow">
-                      <i class="fa fa-shopping-cart"></i>
-                      <span>Add to Cart</span>
-                    </button>
-                    <div class="counter">
-                      <span class="down" onClick="decreaseCount(event, this)"
-                        >-</span
-                      >
-                      <input type="text" value="0" />
-                      <span class="up" onClick="increaseCount(event, this)"
-                        >+</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 cardItem">
-            <div class="card cardPhone">
-              <div class="phone-img">
-                <img
-                  src="https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <h3 class="cardPhone__title">IphoneX</h3>
-                    <p class="cardPhone__text">Iphone</p>
-                  </div>
-                  <div>
-                    <h3 class="cardPhone__title">$999</h3>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <div class="cardPhone__rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                  <div>
-                    <button class="btnPhone-shadow">
-                      <i class="fa fa-shopping-cart"></i>
-                      <span>Add to Cart</span>
-                    </button>
-                    <div class="counter">
-                      <span class="down" onClick="decreaseCount(event, this)"
-                        >-</span
-                      >
-                      <input type="text" value="0" />
-                      <span class="up" onClick="increaseCount(event, this)"
-                        >+</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row" id="product_content"></div>
       </div>
     </section>
     <!-- Bootstrap JavaScript Libraries -->
@@ -252,8 +66,17 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!-- js file -->
     <script src="../javascript/modellers/products.js"></script>
+    <script src="../javascript/services/services.js"></script>
     <script src="../javascript/controllers/main.js"></script>
   </body>
 </html>
