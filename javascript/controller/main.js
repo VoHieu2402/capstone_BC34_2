@@ -6,30 +6,46 @@ function increaseCount(a, b, id) {
     // nếu số lượng đang bằng 0 thì khi chinh mũi tên tăng lên sẽ tăng số lượng lên, đồng thời thêm item vào giỏ hàng
     if(value==0) {
         addToCart(id);
+        // save data to local storage
+        setLocalStorage();
     } else {
         // nếu số lượng khác 0, tức item đã có trong giỏ hàng -> chỉ cập nhật số lượng
         value++;
         input.value = value;
         myCart.getItemById(id).quantity = value;
+        // save data to local storage
+        setLocalStorage();
         // cập nhật số lượng ở góc phải màn hình
         document.getElementsByClassName("overlay-num")[0].innerHTML = countQuantity();
     }
 };
   
 // chỉnh mũi tên giảm số lượng
-function decreaseCount(a, b) {
+function decreaseCount(a, b, id) {
     var input = b.nextElementSibling;
     var value = parseInt(input.value, 10);
     if (value > 0) {
         value = isNaN(value) ? 0 : value;
         value--;
         input.value = value;
+        myCart.getItemById(id).quantity = value;
+        // save data to local storage
+        setLocalStorage();
+        // cập nhật số lượng ở góc phải màn hình
+        document.getElementsByClassName("overlay-num")[0].innerHTML = countQuantity();
+        // khi điều chỉnh số lượng về 0 thì xóa khỏi danh sách cart
+        if(value==0) {
+            myCart.removeItem(id);
+            // save data to local storage
+            setLocalStorage();
+        }
     }
 };
 
 function getEle(id) {
     return document.getElementById(id);
 };
+
 
 var dataPhone = new Data();
 
@@ -82,7 +98,7 @@ function renderHTML(dataLst) {
                   <span>Add to Cart</span>
                 </button>
                 <div class="counter">
-                  <span class="down" onClick="decreaseCount(event, this)"
+                  <span class="down" onClick="decreaseCount(event, this, ${product.id})"
                     >-</span
                   >
                   <input type="text" value="0" id="input-quantity-${product.id}" />
@@ -104,6 +120,9 @@ fetchData();
 
 var myCart = new ListOfCarts();
 
+// get local storage
+getLocalStorage();
+
 // Hàm set Local Storage
 function setLocalStorage() {
     // convert JSON into string
@@ -123,9 +142,6 @@ function getLocalStorage() {
         myCart.arr = dataJSON;
     }
 };
-
-// get local storage
-getLocalStorage();
 
 // kiểm tra item có trong giỏ hàng chưa
 function checkAvailInCart(id,lst) {
@@ -153,6 +169,8 @@ function addToCart(id) {
                     1
                 );
                 myCart.addToLst(cartItem);
+                // save data to local storage
+                setLocalStorage();
             // nếu giỏ hàng không rỗng thì kiểm tra xem item định thêm có trong giỏ hàng chưa
             } else {
                 var check = checkAvailInCart(id,myCart.arr);
@@ -163,6 +181,8 @@ function addToCart(id) {
                         1
                     );
                     myCart.addToLst(cartItem);
+                    // save data to local storage
+                    setLocalStorage();
                 }
             }
             // điều chỉnh số lượng ở góc phải màn hình
@@ -187,7 +207,20 @@ function countQuantity() {
     return totalQuantity;
 };
 
+var totalPrice = 0;
+
+// save data to local storage
+setLocalStorage();
+
+
 console.log(myCart.arr);
+
+// var testItem = new Phone(3,"Samsung J6",50,"gud","gud","gud","gud.png","gud","Samsung");
+// var test = new CartItem(testItem,2);
+// console.log(test);
+
+
+
 
 
 
