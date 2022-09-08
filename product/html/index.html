@@ -35,11 +35,10 @@
       <div class="container d-flex justify-content-between">
         <div class="filter d-flex">
           <i class="fa fa-filter"></i>
-          <select class="form-select">
-            <option selected>Brand</option>
-            <option value="all">All</option>
-            <option value="samsung">Samsung</option>
-            <option value="iphone">Iphone</option>
+          <select class="form-select" id="productFilter">
+            <option value="All">All</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Iphone">Iphone</option>
           </select>
         </div>
         <div class="cart">
@@ -67,7 +66,7 @@
       integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
       crossorigin="anonymous"
     ></script>
-
+    
     <!-- Axios Librabry -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
