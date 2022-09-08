@@ -10,7 +10,7 @@ function getLocalStorage() {
     }
 };
 
-// Hàm set Local Storage, truyền vào tham gia là danh sách giỏ hàng
+// Hàm set Local Storage, truyền vào tham số là danh sách giỏ hàng
 function setLocalStorage(arrCart) {
     // convert JSON into string
     var dataString = JSON.stringify(arrCart);

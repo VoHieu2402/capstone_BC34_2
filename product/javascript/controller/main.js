@@ -131,12 +131,6 @@ var myCart = new ListOfCarts();
 // get local storage
 getLocalStorage();
 
-// var myCart = new ListOfCarts();
-
-// // get local storage
-// getLocalStorage();
-
-console.log(myCart.arr);
 
 // Hàm set Local Storage
 function setLocalStorage() {
@@ -227,11 +221,7 @@ function countQuantity() {
 setLocalStorage();
 
 
-console.log(myCart.arr);
 
-// var testItem = new Phone(3,"Samsung J6",50,"gud","gud","gud","gud.png","gud","Samsung");
-// var test = new CartItem(testItem,2);
-// console.log(test);
 
 
 
