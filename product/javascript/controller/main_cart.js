@@ -119,5 +119,9 @@ function deleteItemOfCart(id) {
     calcTotalPaid();
 }
 
+if(myCart.arr.length!=0) {
+    getEle("cart-empty").style.display = "none";
+}
+
 renderHTMLCart(myCart.arr);
 calcTotalPaid();
