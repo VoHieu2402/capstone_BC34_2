@@ -55,6 +55,15 @@ function fetchData() {
         .getLstProduct()
         .then(function(result){
             renderHTML(result.data);
+            // xử lý trong đây để xử lí bất đồng bộ với việc hiển thị thông tin từ local storage ở dưới
+    
+            // hiển thị thông tin về số lượng từ local storage
+            for(var i=0;i<myCart.arr.length;i++) {
+                getEle(`input-quantity-${myCart.arr[i].phoneItem.id}`).value = myCart.arr[i].quantity;
+            }
+
+            document.getElementsByClassName("overlay-num")[0].innerHTML = countQuantity();
+
         })
         .catch(function(error){
             console.log(error);
@@ -119,9 +128,15 @@ function renderHTML(dataLst) {
 fetchData();
 
 var myCart = new ListOfCarts();
-
 // get local storage
 getLocalStorage();
+
+// var myCart = new ListOfCarts();
+
+// // get local storage
+// getLocalStorage();
+
+console.log(myCart.arr);
 
 // Hàm set Local Storage
 function setLocalStorage() {
@@ -207,7 +222,6 @@ function countQuantity() {
     return totalQuantity;
 };
 
-var totalPrice = 0;
 
 // save data to local storage
 setLocalStorage();
