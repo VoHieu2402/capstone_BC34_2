@@ -27,7 +27,7 @@
     />
 
     <!-- css file -->
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/product/css/style.css" />
   </head>
 
   <body>
@@ -43,6 +43,7 @@
         </div>
         <div class="cart">
           <a href="./cart.html"><i class="fa fa-shopping-cart"></i></a>
+          <div class="overlay-num">0</div>
         </div>
       </div>
     </section>
@@ -65,8 +66,8 @@
       integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Axios -->
+    
+    <!-- Axios Librabry -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
       integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
@@ -75,8 +76,10 @@
     ></script>
 
     <!-- js file -->
-    <script src="../javascript/modellers/products.js"></script>
-    <script src="../javascript/services/services.js"></script>
-    <script src="../javascript/controllers/main.js"></script>
+    <script src="/product/javascript/data/data.js"></script>
+    <script src="/product/javascript/model/cart.js"></script>
+    <script src="/product/javascript/model/phone.js"></script>
+    <script src="/product/javascript/model/lstCart.js"></script>
+    <script src="/product/javascript/controller/main.js"></script>
   </body>
 </html>
