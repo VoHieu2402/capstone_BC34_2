@@ -203,8 +203,8 @@ function validateInputs(name, price, img, type, desc) {
     validation.kiemTraDoDaiKyTu(
       desc,
       "tbdesc",
-      "Vui lòng nhập từ 60-999 ký tự!",
-      60,
+      "Vui lòng nhập từ 10-999 ký tự!",
+      10,
       999
     );
 
