@@ -1,0 +1,15 @@
+Thành viên nhóm:
+ - Võ Minh Hiếu
+ - Võ Thành An 
+
+ Phân công:
+ - Hiếu:
+    + Làm giao diện trang index.html 
+    + Làm tất cả tính năng liên quan đến trang index.html ngoại trừ tính năng filter sản phẩm
+    + Làm các tính năng của nút Add to Cart, tăng giảm số lượng qua nút mũi tên ở trang index và trang cart.html
+    + Deploy web trên vercel và quay video
+- An:
+    + Làm giao diện trang cart.html, order.html và trang admin 
+    + Làm tất cả tính năng của trang admin 
+    + Làm tính năng filter của trang index 
+    + Làm tính năng của nút "Mua hàng" và "Xóa giỏ hàng" của trang cart.html 
