@@ -23,32 +23,15 @@
     <div class="container order">
       <h2 class="order-title">Đặt hàng</h2>
       <div class="order-content">
-        <div class="order-items" id="orderItems">
-          <div class="order-item row">
-            <div class="item-name">
-              <span class="item-quantity">1</span> x
-              <span>Airpods Pro</span>
-            </div>
-            <div class="item-amount">
-              <span>$ 400</span>
-            </div>
-          </div>
-          <div class="order-item row">
-            <div class="item-name">
-              <span class="item-quantity">1</span> x
-              <span>Airpods Pro</span>
-            </div>
-            <div class="item-amount">
-              <span>$ 400</span>
-            </div>
-          </div>
-        </div>
+        <div class="order-items" id="orderItems"></div>
         <hr />
         <div class="order-payment">
           <span>Thanh toán</span>
           <div class="d-flex">
             <p>Số tiền cần thanh toán:</p>
-            <span class="order-amount">$ 1000</span>
+            <span class="order-amount"
+              >$ <span id="totalOrderAmount"></span
+            ></span>
           </div>
         </div>
         <div class="order-footer text-right">
@@ -59,7 +42,7 @@
               data-toggle="modal"
               data-target="#myModal"
             >
-              Đặt hàng ngay
+              Đặt hàng và thanh toán
             </button>
             <a href="./cart.html" class="btn btn-danger">Huỷ</a>
           </p>
@@ -111,5 +94,10 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <!-- JS -->
+    <script src="../javascript/model/lstCart.js"></script>
+    <script src="../javascript/controller/main_cart.js"></script>
+    <script src="../javascript/controller/main_order.js"></script>
   </body>
 </html>
